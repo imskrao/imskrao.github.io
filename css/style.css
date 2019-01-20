@@ -1,6 +1,6 @@
 /*--
-Author: W3layouts
-Author URL: http://w3layouts.com
+Author: raolayouts
+Author URL: http://raolayouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
@@ -142,6 +142,9 @@ a.navbar-brand {
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus {
     color: #fff;
+    background: -webkit-linear-gradient(#da1b60, #ff8a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 a.navbar-brand img {
@@ -198,7 +201,7 @@ li.nav-item {
 
 /* //particles */
 /* banner text effect */
-.effect-text-w3ls {
+.effect-text-raols {
     position: absolute;
     top: 54%;
     left: 46%;
@@ -206,7 +209,7 @@ li.nav-item {
     width: 100%;
 }
 
-.effect-text-w3ls span {
+.effect-text-raols span {
     display: block;
 }
 
@@ -244,7 +247,7 @@ li.nav-item {
 
 /* //banner text effect */
 /* animation effect text */
-.effect-text-w3ls h2 {
+.effect-text-raols h2 {
     color: #fff;
     font-size: 29px;
     white-space: nowrap;
@@ -270,7 +273,7 @@ p.para-style {
 }
 
 /* button effect */
-.button-w3ls {
+.button-raols {
     margin-top: 3em;
 }
 
@@ -433,23 +436,23 @@ p.counter {
 
 /* //skills */
 /*-- clients --*/
-.w3_testimonials_grid h4 {
+.rao_testimonials_grid h4 {
     font-size: 17px;
     line-height: 1.8;
     letter-spacing: 1px;
 }
 
-.w3_testimonials_grid h5 {
+.rao_testimonials_grid h5 {
     color: #000;
     font-size: 22px;
     letter-spacing: 1px;
 }
 
-.w3_testimonials_grid p {
+.rao_testimonials_grid p {
     font-size: 14px;
 }
 
-.w3_testimonials_grid h4 i {
+.rao_testimonials_grid h4 i {
     font-size: 20px;
 }
 
@@ -523,7 +526,7 @@ p.counter {
 
 /* //projects */
 /* footer */
-.w3l-footer-logo a {
+.raol-footer-logo a {
     color: #1ccacd;
 }
 
@@ -539,11 +542,11 @@ p.copy-right-grids a {
 
 /* //copyright */
 /* social-icons */
-.w3social-icons ul li {
+.raosocial-icons ul li {
     display: inline-block;
 }
 
-.w3social-icons ul li a {
+.raosocial-icons ul li a {
     color: #000;
     font-size: 16px;
     display: block;
@@ -556,7 +559,7 @@ p.copy-right-grids a {
     line-height: 2.5;
 }
 
-.w3social-icons ul li a:hover {
+.raosocial-icons ul li a:hover {
     color: #1ccacd;
     -webkit-box-shadow: 0px 0px 13px 2px #1ccacd;
     -moz-box-shadow: 0px 0px 13px 2px #1ccacd;
@@ -577,16 +580,16 @@ ul.footer-nav-wthree li a {
 
 /* //footer nav */
 /* education */
-.info-w3layouts {
+.info-raolayouts {
     background: linear-gradient(to top left,#ff8a00,#da1b60);
 }
 
-.w3l-overlay {
+.raol-overlay {
     background: url(../images/overlay.png) repeat;
 }
 
 .title-edu i,
-.w3_agileits_services_grid i {
+.rao_agileits_services_grid i {
     color: #ff3f4d;
     font-size: 2em;
 }
@@ -611,7 +614,7 @@ ul.footer-nav-wthree li a {
 
 /* //education */
 /* awards */
-.awards-w3ls {
+.awards-raols {
     background: url(../images/bg5.jpg) no-repeat bottom;
     background-size: cover;
     -webkit-background-size: cover;
@@ -621,7 +624,7 @@ ul.footer-nav-wthree li a {
     min-height: 50vw;
 }
 
-.w3_agileits_services_grid {
+.rao_agileits_services_grid {
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
 }
 
@@ -638,7 +641,7 @@ ul.footer-nav-wthree li a {
     min-height: 340px;
 }
 
-h2.font-w3ls-style {
+h2.font-raols-style {
     padding-top: 0.2%;
     padding-left: 10em;
     font-family: 'Pacifico', cursive;
@@ -748,13 +751,13 @@ h2.font-w3ls-style {
 /* //inner page */
 /* responsive */
 @media(max-width: 1680px) {
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 3.2%;
     }
 }
 
 @media(max-width: 1600px) {
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 4.2%;
     }
 }
@@ -764,7 +767,7 @@ h2.font-w3ls-style {
         font-size: 60px;
     }
 
-    .effect-text-w3ls h2 {
+    .effect-text-raols h2 {
         font-size: 25px;
     }
 
@@ -776,7 +779,7 @@ h2.font-w3ls-style {
         font-size: 17px;
     }
 
-    .effect-text-w3ls {
+    .effect-text-raols {
         left: 50%;
     }
 
@@ -784,7 +787,7 @@ h2.font-w3ls-style {
         width: 150px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 5.2%;
         padding-left: 8em;
     }
@@ -795,7 +798,7 @@ h2.font-w3ls-style {
         font-size: 54px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 3.2%;
         padding-left: 7em;
         font-size: 40px;
@@ -830,7 +833,7 @@ h2.font-w3ls-style {
         font-size: 16px;
     }
 
-    .effect-text-w3ls h2 {
+    .effect-text-raols h2 {
         font-size: 23px;
     }
 
@@ -846,7 +849,7 @@ h2.font-w3ls-style {
         min-height: 56vw;
     }
 
-    .effect-text-w3ls {
+    .effect-text-raols {
         top: 58%;
     }
 
@@ -868,7 +871,7 @@ h2.font-w3ls-style {
         font-size: 6em;
     }
 
-    .w3_testimonials_grid h4 {
+    .rao_testimonials_grid h4 {
         font-size: 16px;
     }
 
@@ -876,7 +879,7 @@ h2.font-w3ls-style {
         font-size: 17px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 7.2%;
         padding-left: 6em;
         font-size: 36px;
@@ -910,7 +913,7 @@ h2.font-w3ls-style {
     }
 
     li.nav-item {
-        margin: 10px 0;
+        margin: 0;
     }
 
     .navbar-light .navbar-nav .nav-link {
@@ -920,11 +923,11 @@ h2.font-w3ls-style {
 
     .navbar-light .navbar-toggler {
         border-color: #fff;
-        border-radius: 0px;
+        border-radius: 2px;
         background: #fff;
     }
 
-    .effect-text-w3ls {
+    .effect-text-raols {
         top: 56%;
         left: 46%;
     }
@@ -969,7 +972,7 @@ h2.font-w3ls-style {
         min-height: 260px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         font-size: 31px;
     }
 }
@@ -983,7 +986,7 @@ h2.font-w3ls-style {
         font-size: 32px;
     }
 
-    .effect-text-w3ls h2 {
+    .effect-text-raols h2 {
         font-size: 21px;
     }
 
@@ -999,7 +1002,7 @@ h2.font-w3ls-style {
         font-size: 15px;
     }
 
-    .effect-text-w3ls {
+    .effect-text-raols {
         top: 58%;
         left: 50%;
     }
@@ -1009,7 +1012,7 @@ h2.font-w3ls-style {
         font-size: 15px;
     }
 
-    .button-w3ls {
+    .button-raols {
         margin-top: 2em;
     }
 
@@ -1021,7 +1024,7 @@ h2.font-w3ls-style {
         min-height: 580px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 10.2%;
     }
 
@@ -1033,7 +1036,7 @@ h2.font-w3ls-style {
 @media(max-width: 768px) {}
 
 @media(max-width: 736px) {
-    .effect-text-w3ls h2 {
+    .effect-text-raols h2 {
         font-size: 20px;
     }
 
@@ -1045,7 +1048,7 @@ h2.font-w3ls-style {
         font-size: 32px;
     }
 
-    .effect-text-w3ls {
+    .effect-text-raols {
         top: 57%;
         left: 43%;
     }
@@ -1096,14 +1099,14 @@ h2.font-w3ls-style {
 }
 
 @media(max-width: 667px) {
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 12.2%;
         padding-left: 4em;
     }
 }
 
 @media(max-width: 640px) {
-    .effect-text-w3ls {
+    .effect-text-raols {
         top: 57%;
         left: 46%;
     }
@@ -1123,7 +1126,7 @@ h2.font-w3ls-style {
         background-position: right;
     }
 
-    .effect-text-w3ls {
+    .effect-text-raols {
         left: 50%;
     }
 
@@ -1131,7 +1134,7 @@ h2.font-w3ls-style {
         background-position: 0px -1px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 13.2%;
         padding-left: 4em;
         font-size: 28px;
@@ -1155,7 +1158,7 @@ h2.font-w3ls-style {
         min-height: 488px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 13.2%;
         padding-left: 3em;
         font-size: 27px;
@@ -1179,7 +1182,7 @@ h2.font-w3ls-style {
         padding: .5em 1em;
     }
 
-    .effect-text-w3ls h2 {
+    .effect-text-raols h2 {
         font-size: 18px;
     }
 
@@ -1214,7 +1217,7 @@ h2.font-w3ls-style {
         height: 250px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 9.2%;
         padding-left: 0em;
         font-size: 26px;
@@ -1268,7 +1271,7 @@ h2.font-w3ls-style {
         }
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 11.2%;
         padding-left: 0em;
         font-size: 23px;
@@ -1326,7 +1329,7 @@ h2.font-w3ls-style {
     }
 
     .title-edu i,
-    .w3_agileits_services_grid i {
+    .rao_agileits_services_grid i {
         font-size: 1.5em;
     }
 
@@ -1338,7 +1341,7 @@ h2.font-w3ls-style {
         font-size: 5em;
     }
 
-    .w3_testimonials_grid h4 {
+    .rao_testimonials_grid h4 {
         font-size: 15px;
     }
 
@@ -1352,7 +1355,7 @@ h2.font-w3ls-style {
         font-size: 19px;
     }
 
-    .w3_testimonials_grid h5 {
+    .rao_testimonials_grid h5 {
         font-size: 19px;
     }
 
@@ -1390,7 +1393,7 @@ h2.font-w3ls-style {
         font-size: 15px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 11.2%;
         padding-left: 0em;
         font-size: 21px;
@@ -1406,7 +1409,7 @@ h2.font-w3ls-style {
         font-size: 18px;
     }
 
-    .w3_testimonials_grid h4 {
+    .rao_testimonials_grid h4 {
         font-size: 14px;
     }
 
@@ -1428,7 +1431,7 @@ h2.font-w3ls-style {
         padding: 1px 6px;
     }
 
-    .effect-text-w3ls h2 {
+    .effect-text-raols h2 {
         font-size: 16px;
     }
 
@@ -1452,7 +1455,7 @@ h2.font-w3ls-style {
         padding: 10px 0;
     }
 
-    .button-w3ls {
+    .button-raols {
         margin-top: 1.2em;
     }
 
@@ -1493,7 +1496,7 @@ h2.font-w3ls-style {
         min-height: 460px;
     }
 
-    .w3social-icons ul li a {
+    .raosocial-icons ul li a {
         font-size: 15px;
         width: 35px;
         height: 35px;
@@ -1540,7 +1543,7 @@ h2.font-w3ls-style {
         min-height: 140px;
     }
 
-    h2.font-w3ls-style {
+    h2.font-raols-style {
         padding-top: 13%;
         padding-left: 0em;
         font-size: 16px;
