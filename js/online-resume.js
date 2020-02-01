@@ -11,3 +11,15 @@ $(document).ready(function () {
 		});
 	});
 });
+
+// Hide nav items on click
+var viewportHeight = screen.height;
+var navbarItems = document.querySelectorAll('.navbar-nav .nav-item a')
+var navbarCollapse = document.querySelector('.navbar-collapse')
+if (viewportHeight < 992) {
+	navbarItems.forEach(function (item) {
+		item.addEventListener('click', function () {
+			navbarCollapse.classList.remove('show')
+		})
+	})
+}
