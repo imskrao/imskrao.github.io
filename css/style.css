@@ -1598,17 +1598,18 @@ img.img-fluid {
 
 /* Custome Scroll */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: linear-gradient(to top left, #ff8a00, #da1b60);
+  /* background: linear-gradient(to top left, #ff8a00, #da1b60); */
+  background: #ffd800;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 ::-webkit-scrollbar-track {
   border-radius: 0px;
-  background: #17141d;
-  border-left: 1px solid #5a5a5a;
+  background: #1e2e3a;
+  border-left: 1px solid #1e2e3a;
 }
 
 .loader {
@@ -1667,4 +1668,39 @@ img.img-fluid {
   height: 100%;
   min-height: 320px;
   margin: 0 -5px;
+}
+
+#svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #666;
+  stroke-width: 1em;
+}
+#svg #bar {
+  stroke: #ff9f1e;
+}
+#cont {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 2em auto;
+  box-shadow: 0 0 1em black;
+  border-radius: 100%;
+  position: relative;
+}
+#cont:after {
+  position: absolute;
+  display: block;
+  height: 160px;
+  width: 160px;
+  left: 50%;
+  top: 50%;
+  box-shadow: inset 0 0 1em black;
+  content: attr(data-pct) "%";
+  margin-top: -80px;
+  margin-left: -80px;
+  border-radius: 100%;
+  line-height: 160px;
+  font-size: 2em;
+  text-shadow: 0 0 0.5em black;
 }
