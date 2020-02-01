@@ -92,34 +92,7 @@ a:hover {
 }
 
 /* //Reset Code */
-/* bottom-to-top */
-#toTop {
-  display: none;
-  text-decoration: none;
-  position: fixed;
-  bottom: 24px;
-  right: 3%;
-  overflow: hidden;
-  z-index: 999;
-  width: 32px;
-  height: 36px;
-  border: none;
-  text-indent: 100%;
-  background: url(../images/move-top.png) no-repeat 0px 0px;
-}
 
-#toTopHover {
-  width: 32px;
-  height: 32px;
-  display: block;
-  overflow: hidden;
-  float: right;
-  opacity: 0;
-  -moz-opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-/* //bottom-to-top */
 /* header */
 .mian-content {
   position: relative;
@@ -563,8 +536,11 @@ p.counter {
 
 /* copyright */
 p.copy-right-grids {
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 42px;
+  font-family: "Roboto", sans-serif;
 }
 
 p.copy-right-grids a {
@@ -578,7 +554,7 @@ p.copy-right-grids a {
 }
 
 .raosocial-icons ul li a {
-  color: #000;
+  color: #fff;
   font-size: 16px;
   display: block;
   -webkit-box-shadow: 0px 0px 1px 0px #fff;
@@ -588,6 +564,7 @@ p.copy-right-grids a {
   height: 40px;
   text-align: center;
   line-height: 2.5;
+  background: #14b3fb;
 }
 
 .raosocial-icons ul li a:hover {
@@ -614,7 +591,9 @@ ul.footer-nav-wthree li a {
 .info-raolayouts {
   /* background: linear-gradient(to top left, #ff8a00, #da1b60); */
   background: linear-gradient(rgba(30, 46, 58, 0.9), rgba(30, 46, 58, 0.9)),
-    url(/images/services.jpg);
+    url(/images/exprience.jpg);
+  background-size: cover;
+  background-position: top;
 }
 
 .raol-overlay {
@@ -685,57 +664,54 @@ h2.font-raols-style {
 
 /* contact form */
 .main_grid_contact {
-  background: #f7f7f7;
-  padding: 6em;
+  /* padding: 6em; */
 }
 
 .main_grid_contact label {
-  color: #000;
+  color: #fff;
   letter-spacing: 1px;
-  font-size: 1.2em;
+  text-transform: uppercase;
 }
 
 .main_grid_contact input[type="text"],
 .main_grid_contact input[type="email"],
 .main_grid_contact textarea {
   outline: none;
-  padding: 15px 15px;
+  padding: 10px 5px;
   font-size: 14px;
-  color: #777;
+  color: #1e2e3a;
   background: #fff;
   width: 100%;
   letter-spacing: 1px;
   border: 1px solid #ebeeef;
   border-radius: 0px;
+  text-transform: uppercase;
 }
 
 .main_grid_contact textarea {
-  min-height: 12em;
+  min-height: 8em;
   resize: none;
 }
 
 .main_grid_contact .input-group1 input[type="submit"] {
   outline: none;
-  padding: 16px 0;
-  font-size: 16px;
+  padding: 12px 0;
+  font-size: 17px;
   margin-top: 2em;
-  color: #fff;
-  background: linear-gradient(to top left, #ff8a00, #da1b60);
   border: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  -ms-transition: 0.5s all;
-  transition: 0.5s all;
-  font-weight: 600;
   cursor: pointer;
-  border-radius: 0px;
+  color: #fff;
+  background: #14b3fb;
+  transition: ease-out 0.8s;
+  border-radius: 40px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .main_grid_contact .input-group1 input[type="submit"]:hover {
-  background: linear-gradient(to top left, #ff8a00, #da1b60);
+  background: #ffd800;
 }
 
 /* //contact form */
@@ -755,7 +731,7 @@ h2.font-raols-style {
 .address-grid i {
   font-size: 1.5em;
   color: #fff;
-  background: #1b1e21;
+  background: #14b3fb;
   border-radius: 50%;
   width: 65px;
   height: 65px;
@@ -774,9 +750,9 @@ h2.font-raols-style {
 }
 
 .main_grid_contact h4 {
-  font-size: 2em;
-  color: #464646;
+  color: #fff;
   text-shadow: 0 1px 2px rgba(18, 18, 19, 0.13);
+  text-transform: uppercase;
 }
 
 /* //contact address */
@@ -1327,7 +1303,7 @@ h2.font-raols-style {
   .main_grid_contact input[type="text"],
   .main_grid_contact input[type="email"],
   .main_grid_contact textarea {
-    padding: 12px 15px;
+    padding: 10px 5px;
   }
 
   .main_grid_contact .input-group1 input[type="submit"] {
@@ -1617,7 +1593,7 @@ img.img-fluid {
 .loader {
   border: 6px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 6px solid #da1b60;
+  border-top: 6px solid #14b3fb;
   width: 50px;
   height: 50px;
   -webkit-animation: spin 1s linear infinite; /* Safari */
@@ -1672,41 +1648,6 @@ img.img-fluid {
   margin: 0 -5px;
 }
 
-#svg circle {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 1s linear;
-  stroke: #666;
-  stroke-width: 1em;
-}
-#svg #bar {
-  stroke: #ff9f1e;
-}
-#cont {
-  display: block;
-  height: 200px;
-  width: 200px;
-  margin: 2em auto;
-  box-shadow: 0 0 1em black;
-  border-radius: 100%;
-  position: relative;
-}
-#cont:after {
-  position: absolute;
-  display: block;
-  height: 160px;
-  width: 160px;
-  left: 50%;
-  top: 50%;
-  box-shadow: inset 0 0 1em black;
-  content: attr(data-pct) "%";
-  margin-top: -80px;
-  margin-left: -80px;
-  border-radius: 100%;
-  line-height: 160px;
-  font-size: 2em;
-  text-shadow: 0 0 0.5em black;
-}
-
 /* education */
 .edu-agile-info {
   background: rgba(40, 66, 86, 0.2);
@@ -1722,4 +1663,49 @@ img.img-fluid {
 
 .grids-agiles-one p {
   font-family: "Roboto", sans-serif;
+}
+
+/* gallery */
+.gallery {
+  background: #1e2e3a;
+}
+.gallery .sub-tittle-2 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+/* contact  */
+.banner-bottom-raolayouts {
+  background: linear-gradient(rgba(30, 46, 58, 0.9), rgba(30, 46, 58, 0.9)),
+    url(/images/contact.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-bottom-raolayouts p {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.banner-bottom-raolayouts p a {
+  color: #fff;
+}
+
+.banner-bottom-raolayouts h6.ad-info {
+  color: #fff;
+}
+
+.raols-footer-grids {
+  background: #1e2e3a;
+}
+
+.graph {
+  background: #1e2e3a;
+}
+
+.graph p {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
 }
