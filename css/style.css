@@ -815,12 +815,6 @@ h2.font-raols-style {
   }
 }
 
-@media (max-width: 1280px) {
-  nav.navbar.navbar-expand-lg.navbar-light {
-    padding: 1em 5em;
-  }
-}
-
 @media (max-width: 1080px) {
   nav.navbar.navbar-expand-lg.navbar-light {
     padding: 1em 4em;
