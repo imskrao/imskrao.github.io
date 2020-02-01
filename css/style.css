@@ -455,7 +455,7 @@ p.sub-tittle {
 /* //chart */
 .border-styles,
 .title-edu {
-  border-left: 3px solid #1ccacd;
+  border-left: 3px solid #14b3fb;
 }
 
 p.counter {
@@ -612,7 +612,9 @@ ul.footer-nav-wthree li a {
 /* //footer nav */
 /* education */
 .info-raolayouts {
-  background: linear-gradient(to top left, #ff8a00, #da1b60);
+  /* background: linear-gradient(to top left, #ff8a00, #da1b60); */
+  background: linear-gradient(rgba(30, 46, 58, 0.9), rgba(30, 46, 58, 0.9)),
+    url(/images/services.jpg);
 }
 
 .raol-overlay {
@@ -621,7 +623,7 @@ ul.footer-nav-wthree li a {
 
 .title-edu i,
 .rao_agileits_services_grid i {
-  color: #ff3f4d;
+  color: #ffd800;
   font-size: 2em;
 }
 
@@ -1703,4 +1705,21 @@ img.img-fluid {
   line-height: 160px;
   font-size: 2em;
   text-shadow: 0 0 0.5em black;
+}
+
+/* education */
+.edu-agile-info {
+  background: rgba(40, 66, 86, 0.2);
+}
+
+.aboutbtm-head {
+  color: #ffd800;
+  text-transform: uppercase;
+}
+.grids-agiles-one {
+  text-transform: uppercase;
+}
+
+.grids-agiles-one p {
+  font-family: "Roboto", sans-serif;
 }
