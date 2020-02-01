@@ -663,9 +663,6 @@ h2.font-raols-style {
 }
 
 /* contact form */
-.main_grid_contact {
-  /* padding: 6em; */
-}
 
 .main_grid_contact label {
   color: #fff;
@@ -822,10 +819,6 @@ h2.font-raols-style {
   nav.navbar.navbar-expand-lg.navbar-light {
     padding: 1em 5em;
   }
-
-  .main_grid_contact {
-    padding: 3em;
-  }
 }
 
 @media (max-width: 1080px) {
@@ -918,7 +911,7 @@ h2.font-raols-style {
 
 @media (max-width: 991px) {
   div#navbarSupportedContent {
-    background: rgba(0, 0, 0, 0.91);
+    background: #1e2e3a;
     padding: 1.5em;
   }
 
@@ -934,7 +927,9 @@ h2.font-raols-style {
   .navbar-light .navbar-toggler {
     border-color: #fff;
     border-radius: 2px;
-    background: #fff;
+    background: transparent;
+    color: #fff;
+    padding: 8px 12px;
   }
 
   .effect-text-raols {
@@ -1292,10 +1287,6 @@ h2.font-raols-style {
     height: 300px;
   }
 
-  .main_grid_contact {
-    padding: 2em;
-  }
-
   .main_grid_contact label {
     font-size: 1em;
   }
@@ -1336,7 +1327,7 @@ h2.font-raols-style {
   }
 
   .grid-flex {
-    padding: 2em !important;
+    padding: 0 !important;
   }
 
   .title-edu i,
@@ -1558,10 +1549,6 @@ h2.font-raols-style {
     padding-top: 13%;
     padding-left: 0em;
     font-size: 16px;
-  }
-
-  .main_grid_contact {
-    padding: 2em 1em;
   }
 }
 
