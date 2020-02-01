@@ -218,12 +218,6 @@ li.nav-item {
   opacity: 0.9;
 }
 
-/* particles */
-#particles-js {
-  width: 100%;
-  height: 100%;
-}
-
 /* //particles */
 /* banner text effect */
 .effect-text-raols {
@@ -386,7 +380,9 @@ h3.title-wthree span {
 /* //banner bottom */
 /* services */
 .why-choose-agile {
-  background: linear-gradient(to top left, #ff8a00, #da1b60);
+  /* background: linear-gradient(rgba(30, 46, 58, 0.9), rgba(30, 46, 58, 0.9)),
+    url(/images/services.jpg); */
+  background-color: #233442;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -397,6 +393,8 @@ h3.title-wthree span {
 
 h3.title-wthree {
   font-size: 36px;
+  text-transform: uppercase;
+  color: #ffd800;
 }
 
 .wthree_features_grid.text-center {
@@ -424,11 +422,14 @@ h3.title-wthree {
 .agile-why-text h4 {
   letter-spacing: 1px;
   font-size: 28px;
+  color: #ffd800;
 }
 
 .agile-why-text p,
 p.sub-tittle {
   color: #eee;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
 }
 
 .wthree_agile_us:hover .wthree_features_grid i {
@@ -1589,8 +1590,9 @@ h2.font-raols-style {
 
 /*Own css for images*/
 img.img-fluid {
-  background: linear-gradient(to top left, #ff8a00, #da1b60);
-  padding: 5px;
+  background: #30516c;
+  padding: 3px;
+  border-radius: 3px;
 }
 
 /* Custome Scroll */
@@ -1639,4 +1641,29 @@ img.img-fluid {
 
 #contact {
   background-color: #17141d !important;
+}
+
+/* about me section */
+.bottom-banner-raolayouts {
+  background: #1e2e3a;
+}
+
+.bottom-banner-raolayouts p {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.agileits-raolayouts-grid .services-agile-1 .wthree_agile_us {
+  /* background: rgb(40, 66, 86) */
+  background: linear-gradient(rgba(40, 66, 86, 0.9), rgb(35, 52, 66)),
+    url(/images/services.jpg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  height: 100%;
+  min-height: 320px;
+  margin: 0 -5px;
 }
