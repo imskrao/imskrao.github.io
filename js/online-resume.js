@@ -23,3 +23,11 @@ if (viewportHeight < 992) {
 		})
 	})
 }
+
+// console message
+var consoleMsg = "%c Hey 👋, Welcome to Developer World... This is Santosh Rao!";
+var consoleStyle = "font-size:24px; color: black; \
+	font-weight: bold; background-color: #ffd800; \
+	padding: 10px; border-radius: 3px; \
+	font-family: 'Open Sans'; opacity: 0.7";
+console.log(consoleMsg, consoleStyle);
