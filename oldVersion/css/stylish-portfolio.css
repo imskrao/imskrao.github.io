@@ -322,7 +322,7 @@ input[type=submit] {
 
 #to-new {
   position: fixed;
-  top: 0;
+  top: -40px;
   right: 0;
   background: #ffd800;
   z-index: 99999;

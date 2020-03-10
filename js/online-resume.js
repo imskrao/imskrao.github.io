@@ -19,7 +19,6 @@ $(document).ready(function () {
 		$('#to-old').css("top", "-40px");
 	}, 3000)
 	$('#to-old').click(function() {
-		console.log('hello')
 		window.location.pathname = "/oldVersion/";
 	})
 });
