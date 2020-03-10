@@ -10,6 +10,18 @@ $(document).ready(function () {
 			}, 1000);
 		});
 	});
+
+	// old version control
+	setTimeout(function() {
+		$('#to-old').css("top", "0");
+	}, 1000)
+	setTimeout(function() {
+		$('#to-old').css("top", "-40px");
+	}, 3000)
+	$('#to-old').click(function() {
+		console.log('hello')
+		window.location.pathname = "/oldVersion/";
+	})
 });
 
 // Hide nav items on click
@@ -31,3 +43,5 @@ var consoleStyle = "font-size:24px; color: black; \
 	padding: 10px; border-radius: 3px; \
 	font-family: 'Open Sans'; opacity: 0.7";
 console.log(consoleMsg, consoleStyle);
+
+// old version button

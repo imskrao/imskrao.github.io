@@ -1690,3 +1690,19 @@ img.img-fluid {
   text-transform: uppercase;
   color: #fff;
 }
+
+
+/* // to-old */
+#to-old {
+  position: fixed;
+  top: -40px;
+  right: 0;
+  background: #ffd800;
+  z-index: 99999;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  transition: top 0.5s linear;
+}
