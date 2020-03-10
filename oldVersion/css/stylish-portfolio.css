@@ -320,4 +320,16 @@ input[type=submit] {
     cursor: pointer;
 }
 
-
+#to-new {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #ffd800;
+  z-index: 99999;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  transition: top 0.5s linear;
+}
