@@ -23,7 +23,7 @@ $(document).ready(function () {
 	})
 
 	$('#post-btn').click(function() {
-		var knowwebPath = window.location.href + "/post/knowweb/twitter/";
+		var knowwebPath = window.location.href + "post/knowweb/twitter/";
 		window.open(knowwebPath, '_blank');
 	})
 });
