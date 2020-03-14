@@ -11,6 +11,7 @@ body {
   background: #fff;
   /* font-family: "Source Sans Pro", sans-serif; */
   font-family: "Roboto", sans-serif;
+  margin-bottom: 40px;
 }
 
 body a {
@@ -1705,4 +1706,18 @@ img.img-fluid {
   height: 40px;
   cursor: pointer;
   transition: top 0.5s linear;
+}
+
+#post-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #ffd800;
+  z-index: 99999;
+  padding: 10px 20px;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  color: #222;
+  width: 100%;
+  text-align: center;
 }
