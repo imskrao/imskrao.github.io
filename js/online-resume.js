@@ -21,6 +21,11 @@ $(document).ready(function () {
 	$('#to-old').click(function() {
 		window.location.pathname = "/oldVersion/";
 	})
+
+	$('#post-btn').click(function() {
+		var knowwebPath = window.location.href + "/post/knowweb/twitter/";
+		window.open(knowwebPath, '_blank');
+	})
 });
 
 // Hide nav items on click
