@@ -1692,7 +1692,6 @@ img.img-fluid {
   color: #fff;
 }
 
-
 /* // to-old */
 /* #to-old {
   position: fixed;
@@ -1724,4 +1723,11 @@ img.img-fluid {
 
 .pointer {
   cursor: pointer;
+}
+
+#visitor-count {
+  transition: ease-in-out 0.7s;
+}
+#visitor-count.bottom-40 {
+  bottom: -40px;
 }
