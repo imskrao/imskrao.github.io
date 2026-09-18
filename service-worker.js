@@ -1,70 +1,96 @@
-const cacheName = 'v2';
+const cacheName = 'v5';
 const cacheAssets = [
     'index.html',
     // CSS files
-    'css/bootstrap.css',
-    'css/animation-aos.css',
-    'css/aos.css',
-    'css/style.css',
+    'css/minified/bootstrap.min.css',
+    'css/minified/aos.min.css',
+    'css/minified/style.min.css',
     'css/all.min.css',
     // Fonts
-    'https://fonts.googleapis.com/css?family=Ubuntu&display=swap',
-    'https://fonts.googleapis.com/css?family=Source+Sans+Pro',
-    '//fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext,vietnamese',
-    'https://fonts.googleapis.com/css?family=Merienda',
-    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap',
+    'https://fonts.googleapis.com/css2?family=Ubuntu&family=Source+Sans+Pro&family=Pacifico&family=Merienda&family=Roboto:wght@300;400;500;700;900&display=swap',
     // Javascript
     'js/jquery-2.2.3.min.js',
-    'js/aos.js',
-    'js/online-resume.js',
-    'js/bootstrap.js',
-    // image
-    'images/about.jpg'
-]
+    'js/minified/aos.min.js',
+    'js/minified/online-resume.min.js',
+    'js/minified/bootstrap.min.js',
+    // images
+    'images/about.jpg',
+    'images/about2.jpg',
+    'images/about3.jpg',
+    'images/contact.jpg',
+    'images/exprience.jpg',
+    'images/services.jpg',
+    'images/services2.jpg',
+    'images/move-top.png',
+    'images/overlay.png',
+    // video
+    'videos/banner-video.mp4'
+];
 
-
-// call install event
-
+// Install event - cache assets
 self.addEventListener('install', (e) => {
-    console.log('Service Worker: Installed')
-})
+    e.waitUntil(
+        caches.open(cacheName)
+            .then(cache => {
+                return cache.addAll(cacheAssets);
+            })
+    );
+});
 
-// call activate event
-
+// Activate event - clean old caches
 self.addEventListener('activate', (e) => {
-    console.log('Service Worker: Activated')
-    // Remove unwanted chaches
     e.waitUntil(
         caches.keys()
             .then(cacheNames => {
                 return Promise.all(
                     cacheNames.map(cache => {
                         if (cache !== cacheName) {
-                            console.log('Service Worker: Clearing Old Cache');
                             return caches.delete(cache);
                         }
                     })
-                )
+                );
             })
-    )
-})
+    );
+});
 
-// Call fetch event
+// Fetch event - serve from cache first, then network
 self.addEventListener('fetch', e => {
-    console.log('Service Worker: Fetching');
+    // Skip chrome-extension requests
+    if (e.request.url.startsWith('chrome-extension://')) {
+        return;
+    }
+    
     e.respondWith(
-        fetch(e.request)
-            .then(res => {
-                // Make copy of response
-                const resClone = res.clone()
-                // open caches
-                caches.open(cacheName)
-                    .then(cache => {
-                        // Add response to cache
-                        cache.put(e.request, resClone)
-                    })
-                return res;
+        caches.match(e.request)
+            .then(cachedResponse => {
+                // Return cached response if found
+                if (cachedResponse) {
+                    return cachedResponse;
+                }
+                
+                // Otherwise fetch from network
+                return fetch(e.request)
+                    .then(networkResponse => {
+                        // Clone the response
+                        const responseClone = networkResponse.clone();
+                        
+                        // Open cache
+                        caches.open(cacheName)
+                            .then(cache => {
+                                // Add response to cache if it's not a chrome-extension URL
+                                if (!e.request.url.startsWith('chrome-extension://')) {
+                                    cache.put(e.request, responseClone);
+                                }
+                            });
+                            
+                        return networkResponse;
+                    });
             })
-            .catch(err => caches.match(e.request).then(res => res))
-    )
-})
+            .catch(() => {
+                // Fallback for offline pages
+                if (e.request.url.indexOf('.html') > -1) {
+                    return caches.match('index.html');
+                }
+            })
+    );
+});
