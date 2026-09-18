@@ -1,96 +1,114 @@
-const cacheName = 'v5';
-const cacheAssets = [
-    'index.html',
-    // CSS files
-    'css/minified/bootstrap.min.css',
-    'css/minified/aos.min.css',
-    'css/minified/style.min.css',
-    'css/all.min.css',
-    // Fonts
-    'https://fonts.googleapis.com/css2?family=Ubuntu&family=Source+Sans+Pro&family=Pacifico&family=Merienda&family=Roboto:wght@300;400;500;700;900&display=swap',
-    // Javascript
-    'js/jquery-2.2.3.min.js',
-    'js/minified/aos.min.js',
-    'js/minified/online-resume.min.js',
-    'js/minified/bootstrap.min.js',
-    // images
-    'images/about.jpg',
-    'images/about2.jpg',
-    'images/about3.jpg',
-    'images/contact.jpg',
-    'images/exprience.jpg',
-    'images/services.jpg',
-    'images/services2.jpg',
-    'images/move-top.png',
-    'images/overlay.png',
-    // video
-    'videos/banner-video.mp4'
+/**
+ * Service worker - offline support for a static site.
+ *
+ * Strategy differs by request type, deliberately:
+ *   - Navigations: network first. The previous version served HTML cache-first,
+ *     which left returning visitors pinned to a stale page until the cache name
+ *     changed. Content correctness beats a few hundred milliseconds here.
+ *   - Same-origin assets: stale-while-revalidate. Fingerprint-free filenames
+ *     mean we serve instantly and refresh in the background.
+ *   - Cross-origin (fonts): cache first, since those URLs are immutable.
+ */
+
+const VERSION = 'v6';
+const SHELL = `shell-${VERSION}`;
+const RUNTIME = `runtime-${VERSION}`;
+
+const PRECACHE = [
+  '/',
+  '/about/',
+  '/work/',
+  '/contact/',
+  '/404.html',
+  '/css/app.css',
+  '/js/main.js',
+  '/images/icons.svg',
+  '/images/santosh.jpg',
+  '/favicon.svg',
+  '/site.webmanifest'
 ];
 
-// Install event - cache assets
-self.addEventListener('install', (e) => {
-    e.waitUntil(
-        caches.open(cacheName)
-            .then(cache => {
-                return cache.addAll(cacheAssets);
-            })
-    );
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches
+      .open(SHELL)
+      // addAll() is all-or-nothing; one 404 would abort the whole install and
+      // leave the site with no offline support at all.
+      .then((cache) => Promise.allSettled(PRECACHE.map((url) => cache.add(url))))
+      .then(() => self.skipWaiting())
+  );
 });
 
-// Activate event - clean old caches
-self.addEventListener('activate', (e) => {
-    e.waitUntil(
-        caches.keys()
-            .then(cacheNames => {
-                return Promise.all(
-                    cacheNames.map(cache => {
-                        if (cache !== cacheName) {
-                            return caches.delete(cache);
-                        }
-                    })
-                );
-            })
-    );
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches
+      .keys()
+      .then((names) =>
+        Promise.all(
+          names
+            .filter((name) => name !== SHELL && name !== RUNTIME)
+            .map((name) => caches.delete(name))
+        )
+      )
+      .then(() => self.clients.claim())
+  );
 });
 
-// Fetch event - serve from cache first, then network
-self.addEventListener('fetch', e => {
-    // Skip chrome-extension requests
-    if (e.request.url.startsWith('chrome-extension://')) {
-        return;
-    }
-    
-    e.respondWith(
-        caches.match(e.request)
-            .then(cachedResponse => {
-                // Return cached response if found
-                if (cachedResponse) {
-                    return cachedResponse;
-                }
-                
-                // Otherwise fetch from network
-                return fetch(e.request)
-                    .then(networkResponse => {
-                        // Clone the response
-                        const responseClone = networkResponse.clone();
-                        
-                        // Open cache
-                        caches.open(cacheName)
-                            .then(cache => {
-                                // Add response to cache if it's not a chrome-extension URL
-                                if (!e.request.url.startsWith('chrome-extension://')) {
-                                    cache.put(e.request, responseClone);
-                                }
-                            });
-                            
-                        return networkResponse;
-                    });
-            })
-            .catch(() => {
-                // Fallback for offline pages
-                if (e.request.url.indexOf('.html') > -1) {
-                    return caches.match('index.html');
-                }
-            })
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+
+  if (request.method !== 'GET') return;
+
+  const url = new URL(request.url);
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') return;
+
+  // HTML navigations - network first, cached copy as the offline fallback.
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(RUNTIME).then((cache) => cache.put(request, copy));
+          return response;
+        })
+        .catch(async () => (await caches.match(request)) || caches.match('/404.html'))
     );
+    return;
+  }
+
+  // Cross-origin (Google Fonts) - cache first; these URLs never change content.
+  if (url.origin !== self.location.origin) {
+    event.respondWith(
+      caches.match(request).then(
+        (cached) =>
+          cached ||
+          fetch(request).then((response) => {
+            // Opaque responses are fine to store, but only if the fetch worked.
+            if (response.ok || response.type === 'opaque') {
+              const copy = response.clone();
+              caches.open(RUNTIME).then((cache) => cache.put(request, copy));
+            }
+            return response;
+          })
+      )
+    );
+    return;
+  }
+
+  // Same-origin assets - stale while revalidate.
+  event.respondWith(
+    caches.match(request).then((cached) => {
+      const network = fetch(request)
+        .then((response) => {
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(RUNTIME).then((cache) => cache.put(request, copy));
+          }
+          return response;
+        })
+        .catch(() => cached);
+
+      return cached || network;
+    })
+  );
 });

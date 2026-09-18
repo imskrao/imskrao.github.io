@@ -1,567 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-	<title>Santosh Rao</title>
-	<!-- Meta tag Keywords -->
-	<meta name="theme-color" content="#1e2e3a" />
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords"
-		content="Santosh Rao, Technical Lead, Developer, Web Developer, Designer, Web designer, graphic designer, UI Designer, UI Developer, UI Ux" />
-	<meta name="description" content="Santosh Rao - Technical Lead specializing in frontend development and UI/UX design">
 
-	<!-- Preload critical assets -->
-	<link rel="preload" href="css/minified/bootstrap.min.css" as="style">
-	<link rel="preload" href="css/minified/style.min.css" as="style">
-	<link rel="preload" href="js/jquery-2.2.3.min.js" as="script">
-	<link rel="preload" href="videos/banner-video.mp4" as="video" type="video/mp4">
+	<title>Santosh Rao - Senior Software Engineer</title>
+	<meta name="description" content="Senior Software Engineer in Gurugram, India. I build fast, accessible web products - React, TypeScript and Node - and lead the frontend architecture behind them.">
+	<link rel="canonical" href="https://imskrao.github.io/">
 
-	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/minified/bootstrap.min.css">
-	<!-- Bootstrap-Core-CSS -->
-	<link href='css/minified/aos.min.css' rel='stylesheet prefetch' type="text/css" media="all" />
-	<!-- animation css -->
-	<link rel="stylesheet" href="css/minified/style.min.css" type="text/css" media="all" />
-	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/all.min.css">
-	<!-- Font-Awesome-Icons-CSS -->
-	<!-- //Custom-Files -->
+	<meta name="theme-color" content="#2a2f3a" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
 
-	<!-- Web-Fonts - Consolidated and with display swap for better performance -->
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=Source+Sans+Pro&family=Pacifico&family=Merienda&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-	<!-- //Web-Fonts -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://imskrao.github.io/">
+	<meta property="og:title" content="Santosh Rao - Senior Software Engineer">
+	<meta property="og:description" content="I build fast, accessible web products - React, TypeScript and Node - and lead the frontend architecture behind them.">
+	<meta property="og:image" content="https://imskrao.github.io/images/santosh.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@im_skrao">
 
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="manifest" href="/site.webmanifest">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+	<link rel="stylesheet" href="/css/app.css">
+
+	<script>
+		// Applied before first paint so the correct theme never flashes.
+		document.documentElement.classList.add('js');
+		// The `js` class is what hides .reveal elements before they animate in.
+		// If main.js never boots (network failure, parse error), drop it again so
+		// the page is readable rather than blank.
+		setTimeout(function () {
+			if (!window.__booted) document.documentElement.classList.remove('js');
+		}, 2500);
+		try {
+			var stored = localStorage.getItem('theme');
+			if (stored) document.documentElement.dataset.theme = stored;
+		} catch (e) { /* storage blocked - fall back to the OS preference */ }
+	</script>
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Santosh Rao",
+		"url": "https://imskrao.github.io/",
+		"image": "https://imskrao.github.io/images/santosh.jpg",
+		"jobTitle": "Senior Software Engineer",
+		"email": "mailto:dev.santoshrao@gmail.com",
+		"address": { "@type": "PostalAddress", "addressLocality": "Gurugram", "addressCountry": "IN" },
+		"sameAs": [
+			"https://github.com/imskrao",
+			"https://www.linkedin.com/in/im-skrao/",
+			"https://twitter.com/im_skrao"
+		],
+		"knowsAbout": ["TypeScript", "React", "Frontend Architecture", "Web Performance", "Accessibility", "Node.js"]
+	}
+	</script>
+
+	<script type="module" src="/js/main.js"></script>
 </head>
 
 <body>
-	<div class="mian-content">
-		<!-- video container -->
-		<video width="400" autoplay muted class="banner-video">
-			<source src="./videos/banner-video.mp4" type="video/mp4">
-		</video>
-		<div class="banner-outer"></div>
-		<!-- header -->
-		<header data-aos="fade-down">
-			<nav class="container navbar navbar-expand-lg navbar-light">
-				<div class="logo text-left">
-					<h1>
-						<a class="navbar-brand" href="index.html"> Santosh Rao</a>
-					</h1>
-				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<i class="fa fa-bars" aria-hidden="true"></i>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-lg-auto text-lg-right text-center">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link scroll" href="#about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link scroll" href="#services">What I Do?</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link scroll" href="#skills">Skills</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link scroll" href="#education" title="">Edu & Exp</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link scroll" href="#projects">Projects</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link scroll" href="#contact">Contact</a>
-						</li>
-					</ul>
-				</div>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<div class="progress" aria-hidden="true"></div>
+
+	<header class="site-header" data-header>
+		<div class="wrap site-header__inner">
+			<a class="brand" href="/">
+				<span class="brand__mark" aria-hidden="true">SR</span>
+				<span>Santosh Rao</span>
+			</a>
+
+			<nav class="nav" aria-label="Primary">
+				<ul class="nav__list" data-nav-list>
+					<li><a class="nav__link" href="/" aria-current="page">Home</a></li>
+					<li><a class="nav__link" href="/about/">About</a></li>
+					<li><a class="nav__link" href="/work/">Work</a></li>
+					<li><a class="nav__link" href="/contact/">Contact</a></li>
+				</ul>
 			</nav>
-		</header>
-		<!-- //header -->
 
-		<!-- banner -->
-		<div class="banner-text">
-			<div class="effect-text-raols">
-				<div class="container">
-					<h2>Technical Lead</h2>
-					<p class="mytext1 uppercase mt-2">Hi I'm <span class="mytext2 d-inline-block"> Santosh Rao </span>
-					</p>
-					<p class="para-style text-light mt-xl-4 mt-3">Not Your Average Software Engineer, Software Engineer who focuses on writing clean, elegant and efficient code.</p>
-					<p class="para-style text-light mt-xl-4 mt-3">What would you do if you had a software expert
-						available at your fingertips?</p>
-					<div class="button-raols" data-aos="fade-up">
-						<a href="#contact" class="btn btn-sm scroll animated-button thar-four">Hire Me</a>
-					</div>
-				</div>
-			</div>
+			<button class="icon-btn" type="button" data-theme-toggle aria-pressed="false">
+				<svg class="theme-toggle__sun" aria-hidden="true"><use href="/images/icons.svg#sun"></use></svg>
+				<svg class="theme-toggle__moon" aria-hidden="true"><use href="/images/icons.svg#moon"></use></svg>
+			</button>
+
+			<button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false"
+				aria-controls="primary-nav" aria-label="Open menu">
+				<svg aria-hidden="true"><use href="/images/icons.svg#menu"></use></svg>
+			</button>
 		</div>
-		<!-- //banner -->
-	</div>
-	<!-- //main -->
+	</header>
 
-	<!-- banner bottom -->
-	<section class="bottom-banner-raolayouts py-5" id="about">
-		<div class="container py-xl-5 py-lg-3">
-			<div class="row py-xl-3 py-lg-3">
-				<div class="col-lg-8 feature mt-lg-0 mt-5" data-aos="fade-left">
-					<h3 class="title-wthree mb-4">About Me</h3>
-					<p>My name is Santosh Rao I'm a Technical Lead. I am passionate about building excellent
-						software that improves the lives of those around me.</p>
-					<br />
-					<p>My interest in developing user interfaces is what drove me to specialise in Development.
-					</p>
-					<div class="button-raols mb-5" data-aos="fade-up">
-						<a href="#" class="btn btn-sm animated-button thar-four">Download</a>
-					</div>
-				</div>
-				<div class="col-lg-4 feature fea-slider" data-aos="fade-right">
-					<img src="images/about3.jpg" class="img-fluid" alt="">
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- //banner bottom -->
+	<main id="main">
 
-	<!-- services -->
-	<div class="why-choose-agile py-5" id="services">
-		<div class="container py-xl-5 py-lg-3">
-			<!-- heading title -->
-			<div class="mb-lg-5 mb-4 text-center">
-				<h3 class="title-wthree mb-4">What I do?</h3>
-				<p class="sub-tittle">I use the latest tools, techniques and industry best practices for developing
-					useful web applications.</p>
-			</div>
-			<!-- //heading title -->
-			<div class="row agileits-raolayouts-grid pt-md-4">
-				<div class="col-lg-4 services-agile-1" data-aos="zoom-in-up">
-					<div class="row wthree_agile_us py-md-4 py-3">
-						<div class="col-lg-12 text-center agile-why-text">
-							<h4 class="font-weight-bold mb-3">Front End Architecture & Design</h4>
-							<p>Frontend architecture is a collection of tools and processes that aims to improve the
-								quality of frontend code while creating a more efficient and sustainable workflow.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 services-agile-1" data-aos="zoom-in-up">
-					<div class="row wthree_agile_us py-md-4 py-3">
-						<div class="col-lg-12 text-center agile-why-text">
-							<h4 class="font-weight-bold mb-3">JavaScript Performance Tuning</h4>
-							<p>Performance tuning is the improvement of system performance. Typically in computer
-								systems, the motivation for such activity is called a performance problem, which can be
-								either real or anticipated.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 services-agile-1" data-aos="zoom-in-up">
-					<div class="row wthree_agile_us py-md-4 py-3">
-						<div class="col-lg-12 text-center agile-why-text">
-							<h4 class="font-weight-bold mb-3">User Interface Development</h4>
-							<p>User Interface is an optimization of a product for effective and enjoyable use, “User
-								Interface Development” is the development of websites, web applications, mobile
-								applications and software development</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row agileits-raolayouts-grid my-lg-4">
-				<div class="col-lg-4 services-agile-1" data-aos="zoom-in-up">
-					<div class="row wthree_agile_us py-md-4 py-3">
-						<div class="col-lg-12 text-center agile-why-text">
-							<h4 class="font-weight-bold mb-3">Existing Site to Responsive Conversion</h4>
-							<p>According to a recent survey, more than 81% people are in favor of using Responsive
-								Design technique to make their sites mobile-friendly.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 services-agile-1" data-aos="zoom-in-up">
-					<div class="row wthree_agile_us py-md-4 py-3">
-						<div class="col-lg-12 text-center agile-why-text">
-							<h4 class="font-weight-bold mb-3">LMS/CMS Development Services</h4>
-							<p>LMS is a software application for the educational courses, training programs, or learning
-								and development programs. The learning management system concept emerged directly from
-								e-Learning.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 services-agile-1" data-aos="zoom-in-up">
-					<div class="row wthree_agile_us py-md-4 py-3">
-						<div class="col-lg-12 text-center agile-why-text">
-							<h4 class="font-weight-bold mb-3">MAINTENANCE AND SUPPORT</h4>
-							<p>Maintain Applications and projects with latest tools, techniques and prompt servicing.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //services -->
+		<!-- Hero -->
+		<section class="hero">
+			<div class="hero__aura" aria-hidden="true"></div>
+			<div class="hero__grid" aria-hidden="true"></div>
 
-	<!-- skills -->
-	<div class="graph py-5" id="skills">
-		<div class="container pt-xl-5 pt-lg-3">
-			<div class="mb-lg-5 mb-4 text-center">
-				<h3 class="title-wthree mb-4">Skills</h3>
-				<p>I ensure that my development skills integrate well with external technologies and other web services.
+			<div class="wrap hero__content">
+				<span class="pill">
+					<span class="pill__dot" aria-hidden="true"></span>
+					Open to senior frontend &amp; full-stack roles
+				</span>
+
+				<h1 class="hero__title">
+					I build web products that feel <em>instant</em>.
+				</h1>
+
+				<p class="hero__lede">
+					Senior Software Engineer with nine years shipping React and TypeScript at
+					scale - and the frontend architecture, performance budgets and review
+					culture that keep them fast after launch.
 				</p>
+
+				<div class="cluster hero__actions">
+					<a class="btn btn--primary btn--lg" href="/work/">
+						See my work
+						<svg aria-hidden="true"><use href="/images/icons.svg#arrow-right"></use></svg>
+					</a>
+					<a class="btn btn--ghost btn--lg" href="/contact/">Get in touch</a>
+				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>JavaScript</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar active" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-							aria-valuemax="100" style="width:90%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>React</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-success active" role="progressbar" aria-valuenow="40"
-							aria-valuemin="0" aria-valuemax="100" style="width:85%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>Angular</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-info active" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-							aria-valuemax="100" style="width:70%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>TypeScript</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-danger active" role="progressbar" aria-valuenow="40"
-							aria-valuemin="0" aria-valuemax="100" style="width:70%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>Redux/MobX</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-secondary active" role="progressbar" aria-valuenow="40"
-							aria-valuemin="0" aria-valuemax="100" style="width:80%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>Nodejs</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-danger active" role="progressbar" aria-valuenow="40"
-							aria-valuemin="0" aria-valuemax="100" style="width:60%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>ExpressJS</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-secondary active" role="progressbar" aria-valuenow="40"
-							aria-valuemin="0" aria-valuemax="100" style="width:60%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>NextJS</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-warning active" role="progressbar" aria-valuenow="40"
-							aria-valuemin="0" aria-valuemax="100" style="width:55%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>Webpack/Gulp/Parcel</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-info active" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-							aria-valuemax="100" style="width:50%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>Jest/Jasmine</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar active" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-							aria-valuemax="100" style="width:90%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>Tailwind/SASS/LESS</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-success active" role="progressbar" aria-valuenow="40"
-							aria-valuemin="0" aria-valuemax="100" style="width:90%">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 col-12" data-aos="zoom-in-up">
-					<p>jQuery</p>
-					<div class="progress my-3" style="height: 8px">
-						<div class="progress-bar bg-warning active" role="progressbar" aria-valuenow="40"
-							aria-valuemin="0" aria-valuemax="100" style="width:80%">
-						</div>
-					</div>
-				</div>
+
+			<svg class="hero__scroll" width="22" height="22" aria-hidden="true">
+				<use href="/images/icons.svg#arrow-down"></use>
+			</svg>
+		</section>
+
+		<!-- Toolkit marquee -->
+		<div class="marquee" data-marquee aria-label="Technologies I work with">
+			<div class="marquee__track">
+				<span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span>
+				<span>Angular</span><span>Design Systems</span><span>Web Performance</span>
+				<span>Accessibility</span><span>Testing</span><span>GraphQL</span>
+				<span>CI/CD</span><span>Tailwind</span><span>Vite</span><span>PostgreSQL</span>
 			</div>
 		</div>
-	</div>
-	<!-- //skills -->
 
-	<!-- education -->
-	<div class="info-raolayouts" id="education">
-		<div class="raol-overlay py-5">
-			<div class="container py-xl-5 py-lg-3">
-				<div class="edu-agile-info">
-					<div class="container rounded">
-						<div class="row">
-							<div class="col-lg-6" data-aos="fade-up" data-aos-duration="3000">
-								<div class="grid-flex p-5">
-									<div class="pl-4 title-edu py-2 mb-5">
-										<i class="fas fa-book-reader mb-2"></i>
-										<h4 class="aboutbtm-head">My Education</h4>
-									</div>
-									<div class="grids-agiles-one">
-										<h5 class="text-white mb-2">Master of Computer Application</h5>
-										<p>Mohyal Educational & Research Institute of Technology, New Delhi</p>
-										<p>JAN 2021 - JAN 2023</p>
-									</div>
-									<div class="grids-agiles-one my-3">
-										<h5 class="text-white mb-2">Bachelor of Computer Application</h5>
-										<p>Amity Institute of Education, New Delhi</p>
-										<p>JAN 2018 - JAN 2021</p>
-									</div>
-									<div class="grids-agiles-one my-3">
-										<h5 class="text-white mb-2">Full-Stack Development Certification</h5>
-										<p>Arena Animation, New Delhi</p>
-										<p>OCT 2016 - FEB 2019</p>
-									</div>
-									<div class="grids-agiles-one my-3">
-										<h5 class="text-white mb-2">Bachelor of Science – Mathematics</h5>
-										<p>Arena Animation, New Delhi</p>
-										<p>2015 – 2016, Incomplete</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 mt-lg-0 mt-5" data-aos="fade-up" data-aos-duration="3000">
-								<div class="grid-flex p-5">
-									<div class="pl-4 title-edu py-2 mb-5">
-										<i class="fas fa-chalkboard-teacher mb-2"></i>
-										<h4 class="aboutbtm-head">My Experience</h4>
-									</div>
-									<div class="grids-agiles-one">
-										<h5 class="text-white mb-2">Belzabar Software Design</h5>
-										<p>Technical Lead</p>
-										<p>Feb 2022 - Present</p>
-									</div>
-									<div class="grids-agiles-one my-3">
-										<h5 class="text-white mb-2">Belzabar Software Design</h5>
-										<p>Front-End Developer</p>
-										<p>Dec 2019 - Jan 2022</p>
-									</div>
-									<div class="grids-agiles-one my-3">
-										<h5 class="text-white mb-2">Ballistic Learning Pvt. Ltd.</h5>
-										<p>Front-End Developer</p>
-										<p>Jan 2018 - Nov 2019</p>
-									</div>
-									<div class="grids-agiles-one my-3">
-										<h5 class="text-white mb-2">Ballistic Learning Pvt. Ltd.</h5>
-										<p>Front-End Developer (Intern)</p>
-										<p>Sep 2017 - Dec 2017</p>
-									</div>
-								</div>
-							</div>
+		<!-- What I do -->
+		<section class="section">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="section-head__text">
+						<span class="eyebrow">What I do</span>
+						<h2 class="section-head__title">Three things I get hired for</h2>
+						<p class="section-head__lede">
+							The work that actually moves a product: deciding how the frontend is
+							put together, making it fast, and making the team around it faster.
+						</p>
+					</div>
+				</div>
+
+				<div class="grid" style="--grid-min: 17rem;">
+					<article class="card reveal">
+						<span class="icon-tile" aria-hidden="true">
+							<svg><use href="/images/icons.svg#layers"></use></svg>
+						</span>
+						<h3 class="card__title">Frontend architecture</h3>
+						<p class="card__body">
+							Module boundaries, state strategy, design-system foundations and the
+							build pipeline - the decisions that are expensive to reverse. I make
+							them explicitly, write them down, and keep them reviewable.
+						</p>
+					</article>
+
+					<article class="card reveal" style="--reveal-delay: 0.08s;">
+						<span class="icon-tile" aria-hidden="true">
+							<svg><use href="/images/icons.svg#gauge"></use></svg>
+						</span>
+						<h3 class="card__title">Performance &amp; accessibility</h3>
+						<p class="card__body">
+							Core Web Vitals treated as a budget, not a report card. Profiling real
+							sessions, cutting bundle weight, fixing the render path - and shipping
+							interfaces that work with a keyboard and a screen reader.
+						</p>
+					</article>
+
+					<article class="card reveal" style="--reveal-delay: 0.16s;">
+						<span class="icon-tile" aria-hidden="true">
+							<svg><use href="/images/icons.svg#users"></use></svg>
+						</span>
+						<h3 class="card__title">Leading the build</h3>
+						<p class="card__body">
+							Breaking large features into shippable slices, reviewing code so it
+							teaches something, and mentoring engineers into owning their own
+							areas. Most of the leverage is here, not in my own commits.
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Selected work -->
+		<section class="section section--inset">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="section-head__text">
+						<span class="eyebrow">Selected work</span>
+						<h2 class="section-head__title">Things I&rsquo;ve built</h2>
+						<p class="section-head__lede">
+							Side projects where I chose every constraint. Client work is under NDA -
+							happy to walk through it in a conversation.
+						</p>
+					</div>
+					<a class="btn btn--ghost" href="/work/">
+						All projects
+						<svg aria-hidden="true"><use href="/images/icons.svg#arrow-right"></use></svg>
+					</a>
+				</div>
+
+				<div class="grid work-grid">
+					<article class="card reveal">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/SurPlay" target="_blank" rel="noopener">SurPlay</a>
+							</h3>
+							<span class="work-card__year">2024</span>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //education -->
-
-	<!-- projects -->
-	<div class="gallery py-5" id="projects">
-		<div class="container py-xl-5 py-lg-3">
-			<!-- heading title -->
-			<div class="mb-lg-5 mb-4 text-center">
-				<h3 class="title-wthree mb-2">My Projects</h3>
-				<p class="sub-tittle-2 text-white">Recent projects that I have done.</p>
-			</div>
-			<!-- //heading title -->
-
-			<div class="row">
-				<div class="col-12">
-					<div class="d-flex justify-content-center flex-column align-items-center">
-						<div class="loader"></div>
-						<p class="sub-tittle-2 text-white mt-4">Projects are loading, Please Wait!</p>
-						<h1 class="text-white my-3">OR</h1>
-						<p class="sub-tittle-2 text-white text-center">Visit my Github Repositories <a
-								href="https://github.com/imskrao" target="_blank">https://github.com/imskrao</a> </p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--//gallery-->
-
-
-	<!-- contact -->
-	<section class="banner-bottom-raolayouts pt-5" id="contact">
-		<div class="container-fluid pt-xl-5 pt-lg-3">
-			<!-- heading title -->
-			<div class="mb-lg-5 mb-4 text-center">
-				<h3 class="title-wthree mb-4">Contact Me</h3>
-				<p>Get in Touch</p>
-			</div>
-			<!-- //heading title -->
-			<!-- contact address -->
-			<div class="row">
-				<div class="container mb-5">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="address row pt-sm-0 pt-3 pb-sm-0 pb-5 mb-sm-5">
-								<div class="col-lg-12 address-grid" data-aos="zoom-out-up">
-									<div class="row address-info">
-										<div class="col-3 address-left text-lg-center text-right">
-											<i class="far fa-map text-center"></i>
-										</div>
-										<div class="col-9 address-right text-left">
-											<h6 class="ad-info text-uppercase mb-2">Address</h6>
-											<p>Gurugram, India</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-12 address-grid my-lg-0 my-4" data-aos="zoom-out-up">
-									<div class="row address-info mt-5">
-										<div class="col-3 address-left text-lg-center text-right">
-											<i class="far fa-envelope text-center"></i>
-										</div>
-										<div class="col-9 address-right text-left">
-											<h6 class="ad-info text-uppercase mb-2">Email</h6>
-											<p> <a href="mailto:dev.santoshrao@gmail.com"> dev.santoshrao@gmail.com</a>
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-12 address-grid" data-aos="zoom-out-up">
-									<div class="row address-info mt-5">
-										<div class="col-3 address-left text-lg-center text-right">
-											<i class="fas fa-mobile-alt text-center"></i>
-										</div>
-										<div class="col-9 address-right text-left">
-											<h6 class="ad-info text-uppercase mb-2">Phone</h6>
-											<p>+91-9771840XXX</p>
-										</div>
-									</div>
-								</div>
-							</div>
+						<p class="card__body">
+							A music streaming interface built to answer one question: how close to
+							a native player can you get on the web? Gapless queueing, persistent
+							playback across navigation, and a fully keyboard-driven library.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">JavaScript</span><span class="tag">Audio API</span><span class="tag">Responsive UI</span>
 						</div>
+						<span class="card__arrow">
+							View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg>
+						</span>
+					</article>
 
-						<!-- contact form -->
-						<div class="col-lg-6 main_grid_contact">
-							<div class="form">
-								<form action="#" method="post">
-									<div class="form-group" data-aos="zoom-out-up">
-										<label class="mb-2">Name</label>
-										<input class="form-control" type="text" name="Name" placeholder="" required="">
-									</div>
-									<div class="form-group" data-aos="zoom-out-up">
-										<label class="my-2">Email</label>
-										<input class="form-control" type="email" name="Email" placeholder=""
-											required="">
-									</div>
-									<div class="form-group" data-aos="zoom-out-up">
-										<label class="my-2">Message</label>
-										<textarea id="textarea" name="message" placeholder=""></textarea>
-									</div>
-									<div class="input-group1" data-aos="zoom-out-up">
-										<input class="form-control" type="submit" value="Submit">
-									</div>
-								</form>
-							</div>
+					<article class="card reveal" style="--reveal-delay: 0.08s;">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/cryptographic-otp" target="_blank" rel="noopener">cryptographic-otp</a>
+							</h3>
+							<span class="work-card__year">2023</span>
 						</div>
-						<!-- //contact form -->
-					</div>
+						<p class="card__body">
+							A dependency-free OTP generation and verification module. Built after
+							one too many auth flows rolled their own with <code>Math.random()</code>
+							- this one uses the platform crypto primitives and constant-time compare.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">Node.js</span><span class="tag">Crypto</span><span class="tag">Zero deps</span>
+						</div>
+						<span class="card__arrow">
+							View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg>
+						</span>
+					</article>
 
+					<article class="card reveal" style="--reveal-delay: 0.16s;">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/ComedyCache" target="_blank" rel="noopener">ComedyCache</a>
+							</h3>
+							<span class="work-card__year">2024</span>
+						</div>
+						<p class="card__body">
+							A TypeScript experiment in client-side caching strategy - stale-while-
+							revalidate, request de-duplication and offline reads, implemented from
+							scratch to understand what the libraries are actually doing.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">TypeScript</span><span class="tag">Caching</span><span class="tag">Offline</span>
+						</div>
+						<span class="card__arrow">
+							View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg>
+						</span>
+					</article>
 				</div>
 			</div>
-			<!-- //contact address -->
-			<div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+		</section>
 
-			</div>
-		</div>
-	</section>
-	<!-- //contact -->
-
-	<!-- footer -->
-	<footer>
-		<div class="raols-footer-grids py-2">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 raosocial-icons text-lg-left text-center">
-						<ul>
-							<li>
-								<a href="https://github.com/imskrao" target="_blank" class="rounded-circle">
-									<i class="fab fa-github"></i>
-								</a>
-							</li>
-							<li class="px-2">
-								<a href="https://www.linkedin.com/in/im-skrao/" target="_blank" class="rounded-circle">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</li>
-							<li>
-								<a href="https://twitter.com/im_skrao" target="_blank" class="rounded-circle">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-6 raol-footer text-lg-right text-center">
-						<!-- copyright -->
-						<p class="copy-right-grids">copyright &copy; 2024. All Rights Reserved</p>
-						<!-- //copyright -->
+		<!-- CTA -->
+		<section class="section">
+			<div class="wrap">
+				<div class="cta reveal">
+					<span class="eyebrow eyebrow--plain">Available for work</span>
+					<h2 class="cta__title mt-1">Got something worth building?</h2>
+					<p class="cta__lede">
+						I&rsquo;m open to senior frontend and full-stack roles, and to consulting on
+						architecture or performance. Tell me what you&rsquo;re working on.
+					</p>
+					<div class="cluster cta__actions">
+						<a class="btn btn--primary btn--lg" href="/contact/">
+							Start a conversation
+							<svg aria-hidden="true"><use href="/images/icons.svg#arrow-right"></use></svg>
+						</a>
+						<a class="btn btn--ghost btn--lg" href="/about/">More about me</a>
 					</div>
 				</div>
 			</div>
+		</section>
+
+	</main>
+
+	<footer class="site-footer">
+		<div class="wrap site-footer__inner">
+			<p>&copy; <span data-year>2026</span> Santosh Rao. Built from scratch, no framework.</p>
+			<ul class="social" role="list">
+				<li>
+					<a class="icon-btn" href="https://github.com/imskrao" target="_blank" rel="noopener" aria-label="GitHub">
+						<svg aria-hidden="true"><use href="/images/icons.svg#github"></use></svg>
+					</a>
+				</li>
+				<li>
+					<a class="icon-btn" href="https://www.linkedin.com/in/im-skrao/" target="_blank" rel="noopener" aria-label="LinkedIn">
+						<svg aria-hidden="true"><use href="/images/icons.svg#linkedin"></use></svg>
+					</a>
+				</li>
+				<li>
+					<a class="icon-btn" href="https://twitter.com/im_skrao" target="_blank" rel="noopener" aria-label="X (Twitter)">
+						<svg aria-hidden="true"><use href="/images/icons.svg#x"></use></svg>
+					</a>
+				</li>
+				<li>
+					<a class="icon-btn" href="mailto:dev.santoshrao@gmail.com" aria-label="Email">
+						<svg aria-hidden="true"><use href="/images/icons.svg#mail"></use></svg>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</footer>
-	<!-- //footer -->
-
-	<!-- visitor count: start -->
-	<div class="bg-info fixed-bottom p-2 text-center text-white bottom-40" id="visitor-count"></div>
-	<!-- visitor count: end -->
-
-	<!-- Js files -->
-	<!-- JavaScript -->
-	<script src="js/jquery-2.2.3.min.js"></script>
-	<!-- Default-JavaScript-File -->
-
-	<!-- animation js -->
-	<script src='js/minified/aos.min.js' defer></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			AOS.init({
-				easing: 'ease-out-back',
-				duration: 1000,
-				disable: 'mobile'
-			});
-		});
-	</script>
-	<!-- //animation js -->
-
-	<!--  necessary snippets for few javascript files -->
-	<script src="js/minified/online-resume.min.js" defer></script>
-
-	<script src="js/minified/bootstrap.min.js" defer></script>
-	<!-- Necessary-JavaScript-File-For-Bootstrap -->
-	<!-- //Js files -->
-
 </body>
 
 </html>

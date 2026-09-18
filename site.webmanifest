@@ -1,0 +1,13 @@
+{
+  "name": "Santosh Rao - Senior Software Engineer",
+  "short_name": "Santosh Rao",
+  "description": "Portfolio of Santosh Rao, Senior Software Engineer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#2a2f3a",
+  "theme_color": "#2a2f3a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

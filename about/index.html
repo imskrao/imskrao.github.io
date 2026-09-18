@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>About - Santosh Rao</title>
+	<meta name="description" content="Nine years building for the web: frontend architecture, performance and the teams around them. Experience, education and the tools I reach for.">
+	<link rel="canonical" href="https://imskrao.github.io/about/">
+
+	<meta name="theme-color" content="#2a2f3a" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+
+	<meta property="og:type" content="profile">
+	<meta property="og:url" content="https://imskrao.github.io/about/">
+	<meta property="og:title" content="About - Santosh Rao">
+	<meta property="og:description" content="Nine years building for the web: frontend architecture, performance and the teams around them.">
+	<meta property="og:image" content="https://imskrao.github.io/images/santosh.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="manifest" href="/site.webmanifest">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+	<link rel="stylesheet" href="/css/app.css">
+
+	<script>
+		document.documentElement.classList.add('js');
+		// The `js` class is what hides .reveal elements before they animate in.
+		// If main.js never boots (network failure, parse error), drop it again so
+		// the page is readable rather than blank.
+		setTimeout(function () {
+			if (!window.__booted) document.documentElement.classList.remove('js');
+		}, 2500);
+		try {
+			var stored = localStorage.getItem('theme');
+			if (stored) document.documentElement.dataset.theme = stored;
+		} catch (e) { /* storage blocked - fall back to the OS preference */ }
+	</script>
+
+	<script type="module" src="/js/main.js"></script>
+</head>
+
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<div class="progress" aria-hidden="true"></div>
+
+	<header class="site-header" data-header>
+		<div class="wrap site-header__inner">
+			<a class="brand" href="/">
+				<span class="brand__mark" aria-hidden="true">SR</span>
+				<span>Santosh Rao</span>
+			</a>
+
+			<nav class="nav" aria-label="Primary">
+				<ul class="nav__list" data-nav-list>
+					<li><a class="nav__link" href="/">Home</a></li>
+					<li><a class="nav__link" href="/about/" aria-current="page">About</a></li>
+					<li><a class="nav__link" href="/work/">Work</a></li>
+					<li><a class="nav__link" href="/contact/">Contact</a></li>
+				</ul>
+			</nav>
+
+			<button class="icon-btn" type="button" data-theme-toggle aria-pressed="false">
+				<svg class="theme-toggle__sun" aria-hidden="true"><use href="/images/icons.svg#sun"></use></svg>
+				<svg class="theme-toggle__moon" aria-hidden="true"><use href="/images/icons.svg#moon"></use></svg>
+			</button>
+
+			<button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+				<svg aria-hidden="true"><use href="/images/icons.svg#menu"></use></svg>
+			</button>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<section class="page-header">
+			<div class="hero__aura" aria-hidden="true" style="opacity: .28;"></div>
+			<div class="wrap">
+				<span class="eyebrow">About</span>
+				<h1 class="page-header__title">Nine years of shipping, and the habits that came with it.</h1>
+				<p class="page-header__lede">
+					I&rsquo;m a Senior Software Engineer based in Gurugram, India. I care about the
+					unglamorous parts - how a codebase ages, how fast it loads on a bad network,
+					and whether the next engineer can understand it without a meeting.
+				</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="wrap about-split">
+				<div class="stack" style="--stack-space: 1.25rem;">
+					<p class="lede">
+						I started as an intern writing jQuery for an ed-tech product in 2017 and
+						have been building for the browser ever since.
+					</p>
+					<p class="muted">
+						Most of that time has been in React and TypeScript - design systems,
+						dashboards, and long-lived internal tools where the interesting problems
+						are never the components themselves. They&rsquo;re the state that leaks between
+						screens, the bundle that grew 40&nbsp;kB a sprint while nobody watched, and the
+						patterns the team copies because they were the first thing they saw.
+					</p>
+					<p class="muted">
+						So that&rsquo;s where I spend my effort: setting the defaults early, writing the
+						decision down, and reviewing code in a way that makes the next person
+						better rather than just approved. I&rsquo;ve grown from writing features to
+						owning how they&rsquo;re built - and I still prefer to have my hands in the code.
+					</p>
+					<p class="muted">
+						Away from the editor I read about systems design, break things in the
+						devtools performance panel for fun, and rebuild this site more often than
+						is strictly necessary.
+					</p>
+
+					<div class="cluster mt-2">
+						<a class="btn btn--primary" href="/contact/">
+							Work with me
+							<svg aria-hidden="true"><use href="/images/icons.svg#arrow-right"></use></svg>
+						</a>
+						<a class="btn btn--ghost" href="/work/">See the work</a>
+					</div>
+				</div>
+
+				<figure class="portrait reveal">
+					<img src="/images/santosh.jpg" alt="Portrait of Santosh Rao" width="501" height="501"
+						loading="lazy" decoding="async">
+					<figcaption class="portrait__badge">
+						<strong>Santosh Rao</strong><br>
+						<span class="subtle">Senior Software Engineer &middot; Gurugram, IN</span>
+					</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<!-- Experience -->
+		<section class="section section--inset" id="experience">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="section-head__text">
+						<span class="eyebrow">Experience</span>
+						<h2 class="section-head__title">Where I&rsquo;ve worked</h2>
+					</div>
+				</div>
+
+				<ol class="timeline reveal">
+					<li class="timeline__item" data-current="true">
+						<p class="timeline__meta">Jun 2025 - Present</p>
+						<h3 class="timeline__role">Senior Software Engineer</h3>
+						<p class="timeline__org">Coforge</p>
+						<ul class="timeline__points">
+							<li>Own the frontend architecture for client products - module structure, state strategy, shared component library and build pipeline.</li>
+							<li>Lead feature delivery end to end: scoping with stakeholders, slicing the work, and shipping it with the team.</li>
+							<li>Set and defend performance and accessibility baselines so they survive past launch.</li>
+							<li>Mentor engineers through code review and pairing, with a bias toward explaining the reasoning rather than the fix.</li>
+						</ul>
+					</li>
+
+					<li class="timeline__item">
+						<p class="timeline__meta">Feb 2022 - May 2025</p>
+						<h3 class="timeline__role">Senior Computer Scientist</h3>
+						<p class="timeline__org">Belzabar Software Design</p>
+						<ul class="timeline__points">
+							<li>Spearheaded the frontend development of enterprise-grade web applications using React.js, TypeScript, and Redux Toolkit, leading to a 40% boost in user engagement.</li>
+							<li>Built scalable and reusable UI components using Atomic Design principles, streamlining the design and development process.</li>
+							<li>Led a frontend team of 4 developers - conducted code reviews, enforced best practices, and mentored junior team members to elevate overall code quality.</li>
+						</ul>
+					</li>
+
+					<li class="timeline__item">
+						<p class="timeline__meta">Dec 2019 - Jan 2022</p>
+						<h3 class="timeline__role">Computer Scientist</h3>
+						<p class="timeline__org">Belzabar Software Design</p>
+						<ul class="timeline__points">
+							<li>Built and maintained React and Angular interfaces for client-facing web applications.</li>
+							<li>Migrated legacy jQuery screens onto a component-based stack without pausing feature work.</li>
+							<li>Introduced shared UI patterns and testing conventions that the team adopted across projects.</li>
+						</ul>
+					</li>
+
+					<li class="timeline__item">
+						<p class="timeline__meta">Jan 2018 - Nov 2019</p>
+						<h3 class="timeline__role">Frontend Engineer</h3>
+						<p class="timeline__org">Ballistic Learning Pvt. Ltd.</p>
+						<ul class="timeline__points">
+							<li>Developed learning-platform interfaces used by students and instructors daily.</li>
+							<li>Took features from design hand-off to production, including responsive and cross-browser work.</li>
+						</ul>
+					</li>
+
+					<li class="timeline__item">
+						<p class="timeline__meta">Sep 2017 - Dec 2017</p>
+						<h3 class="timeline__role">Frontend Engineer - Intern</h3>
+						<p class="timeline__org">Ballistic Learning Pvt. Ltd.</p>
+						<p class="timeline__body">
+							Where it started: HTML, CSS and JavaScript against real tickets, on a real product, with real users complaining.
+						</p>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- Skills -->
+		<section class="section" id="skills">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="section-head__text">
+						<span class="eyebrow">Toolkit</span>
+						<h2 class="section-head__title">What I reach for</h2>
+						<p class="section-head__lede">
+							Grouped by what I&rsquo;d be comfortable being handed on day one. No
+							percentage bars - nobody is 73% good at TypeScript.
+						</p>
+					</div>
+				</div>
+
+				<div class="reveal">
+					<div class="skill-group">
+						<h3 class="skill-group__name">Core</h3>
+						<div class="cluster" style="--cluster-gap: 0.5rem;">
+							<span class="tag tag--accent">TypeScript</span>
+							<span class="tag tag--accent">JavaScript (ES2024)</span>
+							<span class="tag tag--accent">React</span>
+							<span class="tag">Modern CSS</span>
+							<span class="tag">HTML &amp; ARIA</span>
+						</div>
+					</div>
+
+					<div class="skill-group">
+						<h3 class="skill-group__name">Frameworks</h3>
+						<div class="cluster" style="--cluster-gap: 0.5rem;">
+							<span class="tag">Next.js</span>
+							<span class="tag">Angular</span>
+							<span class="tag">Node.js</span>
+							<span class="tag">Express</span>
+							<span class="tag">Redux / Zustand</span>
+							<span class="tag">TanStack Query</span>
+						</div>
+					</div>
+
+					<div class="skill-group">
+						<h3 class="skill-group__name">Craft</h3>
+						<div class="cluster" style="--cluster-gap: 0.5rem;">
+							<span class="tag">Frontend architecture</span>
+							<span class="tag">Design systems</span>
+							<span class="tag">Core Web Vitals</span>
+							<span class="tag">Accessibility (WCAG 2.2)</span>
+							<span class="tag">Progressive enhancement</span>
+						</div>
+					</div>
+
+					<div class="skill-group">
+						<h3 class="skill-group__name">Tooling</h3>
+						<div class="cluster" style="--cluster-gap: 0.5rem;">
+							<span class="tag">Vite</span>
+							<span class="tag">Webpack</span>
+							<span class="tag">Vitest / Jest</span>
+							<span class="tag">Playwright</span>
+							<span class="tag">Git &amp; CI/CD</span>
+							<span class="tag">Tailwind / SASS</span>
+						</div>
+					</div>
+
+					<div class="skill-group">
+						<h3 class="skill-group__name">Also worked with</h3>
+						<div class="cluster" style="--cluster-gap: 0.5rem;">
+							<span class="tag">GraphQL</span>
+							<span class="tag">PostgreSQL</span>
+							<span class="tag">Docker</span>
+							<span class="tag">Python</span>
+							<span class="tag">AWS basics</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Education -->
+		<section class="section section--inset" id="education">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="section-head__text">
+						<span class="eyebrow">Education</span>
+						<h2 class="section-head__title">How I got here</h2>
+					</div>
+				</div>
+
+				<ol class="timeline reveal">
+					<li class="timeline__item">
+						<p class="timeline__meta">Jan 2021 - Jan 2023</p>
+						<h3 class="timeline__role">Master of Computer Application</h3>
+						<p class="timeline__org">Mohyal Educational &amp; Research Institute of Technology, New Delhi</p>
+					</li>
+					<li class="timeline__item">
+						<p class="timeline__meta">Jan 2018 - Jan 2021</p>
+						<h3 class="timeline__role">Bachelor of Computer Application</h3>
+						<p class="timeline__org">Amity Institute of Education, New Delhi</p>
+					</li>
+					<li class="timeline__item">
+						<p class="timeline__meta">Oct 2016 - Feb 2019</p>
+						<h3 class="timeline__role">Full-Stack Development Certification</h3>
+						<p class="timeline__org">Arena Animation, New Delhi</p>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="wrap">
+				<div class="cta reveal">
+					<h2 class="cta__title">Let&rsquo;s talk</h2>
+					<p class="cta__lede">
+						If any of this lines up with what you need, I&rsquo;d like to hear about it.
+					</p>
+					<div class="cluster cta__actions">
+						<a class="btn btn--primary btn--lg" href="/contact/">
+							Get in touch
+							<svg aria-hidden="true"><use href="/images/icons.svg#arrow-right"></use></svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="site-footer">
+		<div class="wrap site-footer__inner">
+			<p>&copy; <span data-year>2026</span> Santosh Rao. Built from scratch, no framework.</p>
+			<ul class="social" role="list">
+				<li><a class="icon-btn" href="https://github.com/imskrao" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true"><use href="/images/icons.svg#github"></use></svg></a></li>
+				<li><a class="icon-btn" href="https://www.linkedin.com/in/im-skrao/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="/images/icons.svg#linkedin"></use></svg></a></li>
+				<li><a class="icon-btn" href="https://twitter.com/im_skrao" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg aria-hidden="true"><use href="/images/icons.svg#x"></use></svg></a></li>
+				<li><a class="icon-btn" href="mailto:dev.santoshrao@gmail.com" aria-label="Email"><svg aria-hidden="true"><use href="/images/icons.svg#mail"></use></svg></a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+
+</html>

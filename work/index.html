@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Work - Santosh Rao</title>
+	<meta name="description" content="Projects by Santosh Rao - a music streaming interface, a zero-dependency OTP module, a caching experiment, and more. Source on GitHub.">
+	<link rel="canonical" href="https://imskrao.github.io/work/">
+
+	<meta name="theme-color" content="#2a2f3a" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://imskrao.github.io/work/">
+	<meta property="og:title" content="Work - Santosh Rao">
+	<meta property="og:description" content="Projects where I chose every constraint - and what each one was actually for.">
+	<meta property="og:image" content="https://imskrao.github.io/images/santosh.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="manifest" href="/site.webmanifest">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+	<link rel="stylesheet" href="/css/app.css">
+
+	<script>
+		document.documentElement.classList.add('js');
+		// The `js` class is what hides .reveal elements before they animate in.
+		// If main.js never boots (network failure, parse error), drop it again so
+		// the page is readable rather than blank.
+		setTimeout(function () {
+			if (!window.__booted) document.documentElement.classList.remove('js');
+		}, 2500);
+		try {
+			var stored = localStorage.getItem('theme');
+			if (stored) document.documentElement.dataset.theme = stored;
+		} catch (e) { /* storage blocked - fall back to the OS preference */ }
+	</script>
+
+	<script type="module" src="/js/main.js"></script>
+</head>
+
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<div class="progress" aria-hidden="true"></div>
+
+	<header class="site-header" data-header>
+		<div class="wrap site-header__inner">
+			<a class="brand" href="/">
+				<span class="brand__mark" aria-hidden="true">SR</span>
+				<span>Santosh Rao</span>
+			</a>
+
+			<nav class="nav" aria-label="Primary">
+				<ul class="nav__list" data-nav-list>
+					<li><a class="nav__link" href="/">Home</a></li>
+					<li><a class="nav__link" href="/about/">About</a></li>
+					<li><a class="nav__link" href="/work/" aria-current="page">Work</a></li>
+					<li><a class="nav__link" href="/contact/">Contact</a></li>
+				</ul>
+			</nav>
+
+			<button class="icon-btn" type="button" data-theme-toggle aria-pressed="false">
+				<svg class="theme-toggle__sun" aria-hidden="true"><use href="/images/icons.svg#sun"></use></svg>
+				<svg class="theme-toggle__moon" aria-hidden="true"><use href="/images/icons.svg#moon"></use></svg>
+			</button>
+
+			<button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+				<svg aria-hidden="true"><use href="/images/icons.svg#menu"></use></svg>
+			</button>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<section class="page-header">
+			<div class="hero__aura" aria-hidden="true" style="opacity: .28;"></div>
+			<div class="wrap">
+				<span class="eyebrow">Work</span>
+				<h1 class="page-header__title">Projects, and what each one was for.</h1>
+				<p class="page-header__lede">
+					Client work is under NDA, so what&rsquo;s here is the side of my work I can show:
+					projects where I picked the problem and every constraint around it. Source is
+					on GitHub for all of them.
+				</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="wrap">
+				<div class="grid work-grid">
+
+					<article class="card reveal">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/SurPlay" target="_blank" rel="noopener">SurPlay</a>
+							</h3>
+							<span class="work-card__year">2024</span>
+						</div>
+						<p class="card__body">
+							A music streaming interface built to answer one question: how close to a
+							native player can you get on the web? Gapless queueing, playback that
+							survives navigation, and a library you can drive entirely from the keyboard.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">JavaScript</span><span class="tag">Web Audio</span><span class="tag">Responsive UI</span>
+						</div>
+						<span class="card__arrow">View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg></span>
+					</article>
+
+					<article class="card reveal" style="--reveal-delay: 0.06s;">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/cryptographic-otp" target="_blank" rel="noopener">cryptographic-otp</a>
+							</h3>
+							<span class="work-card__year">2023</span>
+						</div>
+						<p class="card__body">
+							A dependency-free OTP generation and verification module, written after
+							one too many auth flows rolled their own with <code>Math.random()</code>.
+							Platform crypto primitives, constant-time comparison, no supply chain.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">Node.js</span><span class="tag">Crypto</span><span class="tag">Zero deps</span>
+						</div>
+						<span class="card__arrow">View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg></span>
+					</article>
+
+					<article class="card reveal" style="--reveal-delay: 0.12s;">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/ComedyCache" target="_blank" rel="noopener">ComedyCache</a>
+							</h3>
+							<span class="work-card__year">2024</span>
+						</div>
+						<p class="card__body">
+							A TypeScript experiment in client-side caching: stale-while-revalidate,
+							request de-duplication and offline reads, built from scratch to find out
+							what the libraries are actually doing under the hood.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">TypeScript</span><span class="tag">Caching</span><span class="tag">Offline</span>
+						</div>
+						<span class="card__arrow">View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg></span>
+					</article>
+
+					<article class="card reveal" style="--reveal-delay: 0.18s;">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/HRM" target="_blank" rel="noopener">HRM</a>
+							</h3>
+							<span class="work-card__year">2023</span>
+						</div>
+						<p class="card__body">
+							A human-resource management interface in TypeScript - employee records,
+							leave and attendance. The interesting part was the permissions model:
+							one role definition driving both the routes and what each screen renders.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">RBAC</span>
+						</div>
+						<span class="card__arrow">View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg></span>
+					</article>
+
+					<article class="card reveal" style="--reveal-delay: 0.24s;">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/Rao-News-App" target="_blank" rel="noopener">Rao News</a>
+							</h3>
+							<span class="work-card__year">2022</span>
+						</div>
+						<p class="card__body">
+							A news reader in React, built around infinite scroll and category
+							filtering. Small enough to be a good place to test loading states and
+							error boundaries properly instead of hand-waving them.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">React</span><span class="tag">REST API</span><span class="tag">Infinite scroll</span>
+						</div>
+						<span class="card__arrow">View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg></span>
+					</article>
+
+					<article class="card reveal" style="--reveal-delay: 0.3s;">
+						<div class="work-card__head">
+							<h3 class="card__title">
+								<a class="card__link" href="https://github.com/imskrao/imskrao.github.io" target="_blank" rel="noopener">This site</a>
+							</h3>
+							<span class="work-card__year">2026</span>
+						</div>
+						<p class="card__body">
+							Hand-written HTML, modern CSS and one small ES module. No framework, no
+							build step, no dependencies - cross-document view transitions, container
+							queries and <code>light-dark()</code> theming straight from the platform.
+						</p>
+						<div class="cluster" style="--cluster-gap: 0.4rem;">
+							<span class="tag">Vanilla</span><span class="tag">Modern CSS</span><span class="tag">PWA</span>
+						</div>
+						<span class="card__arrow">View source <svg aria-hidden="true"><use href="/images/icons.svg#arrow-up-right"></use></svg></span>
+					</article>
+
+				</div>
+
+				<p class="center muted mt-4">
+					More on <a href="https://github.com/imskrao" target="_blank" rel="noopener">github.com/imskrao</a>.
+				</p>
+			</div>
+		</section>
+
+		<section class="section section--tight">
+			<div class="wrap">
+				<div class="cta reveal">
+					<h2 class="cta__title">Want the NDA version?</h2>
+					<p class="cta__lede">
+						The production work I&rsquo;m proudest of isn&rsquo;t public. I&rsquo;m glad to walk through
+						the architecture and trade-offs in a call.
+					</p>
+					<div class="cluster cta__actions">
+						<a class="btn btn--primary btn--lg" href="/contact/">
+							Get in touch
+							<svg aria-hidden="true"><use href="/images/icons.svg#arrow-right"></use></svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="site-footer">
+		<div class="wrap site-footer__inner">
+			<p>&copy; <span data-year>2026</span> Santosh Rao. Built from scratch, no framework.</p>
+			<ul class="social" role="list">
+				<li><a class="icon-btn" href="https://github.com/imskrao" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true"><use href="/images/icons.svg#github"></use></svg></a></li>
+				<li><a class="icon-btn" href="https://www.linkedin.com/in/im-skrao/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="/images/icons.svg#linkedin"></use></svg></a></li>
+				<li><a class="icon-btn" href="https://twitter.com/im_skrao" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg aria-hidden="true"><use href="/images/icons.svg#x"></use></svg></a></li>
+				<li><a class="icon-btn" href="mailto:dev.santoshrao@gmail.com" aria-label="Email"><svg aria-hidden="true"><use href="/images/icons.svg#mail"></use></svg></a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+
+</html>

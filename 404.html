@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Page not found - Santosh Rao</title>
+	<meta name="description" content="That page doesn't exist.">
+	<meta name="robots" content="noindex">
+
+	<meta name="theme-color" content="#2a2f3a" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+	<link rel="stylesheet" href="/css/app.css">
+
+	<script>
+		document.documentElement.classList.add('js');
+		// The `js` class is what hides .reveal elements before they animate in.
+		// If main.js never boots (network failure, parse error), drop it again so
+		// the page is readable rather than blank.
+		setTimeout(function () {
+			if (!window.__booted) document.documentElement.classList.remove('js');
+		}, 2500);
+		try {
+			var stored = localStorage.getItem('theme');
+			if (stored) document.documentElement.dataset.theme = stored;
+		} catch (e) { /* storage blocked */ }
+	</script>
+
+	<script type="module" src="/js/main.js"></script>
+</head>
+
+<body>
+	<header class="site-header" data-header>
+		<div class="wrap site-header__inner">
+			<a class="brand" href="/">
+				<span class="brand__mark" aria-hidden="true">SR</span>
+				<span>Santosh Rao</span>
+			</a>
+			<nav class="nav" aria-label="Primary">
+				<ul class="nav__list" data-nav-list>
+					<li><a class="nav__link" href="/">Home</a></li>
+					<li><a class="nav__link" href="/about/">About</a></li>
+					<li><a class="nav__link" href="/work/">Work</a></li>
+					<li><a class="nav__link" href="/contact/">Contact</a></li>
+				</ul>
+			</nav>
+			<button class="icon-btn" type="button" data-theme-toggle aria-pressed="false">
+				<svg class="theme-toggle__sun" aria-hidden="true"><use href="/images/icons.svg#sun"></use></svg>
+				<svg class="theme-toggle__moon" aria-hidden="true"><use href="/images/icons.svg#moon"></use></svg>
+			</button>
+			<button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+				<svg aria-hidden="true"><use href="/images/icons.svg#menu"></use></svg>
+			</button>
+		</div>
+	</header>
+
+	<main id="main">
+		<section class="hero hero--compact">
+			<div class="hero__aura" aria-hidden="true"></div>
+			<div class="hero__grid" aria-hidden="true"></div>
+			<div class="wrap hero__content center" style="margin-inline: auto;">
+				<span class="eyebrow eyebrow--plain">Error 404</span>
+				<h1 class="hero__title" style="font-size: var(--step-4);">This page doesn&rsquo;t exist.</h1>
+				<p class="hero__lede" style="margin-inline: auto;">
+					Either the link is wrong or I moved something and forgot to redirect it.
+					Both are my fault.
+				</p>
+				<div class="cluster hero__actions" style="justify-content: center;">
+					<a class="btn btn--primary btn--lg" href="/">
+						Back home
+						<svg aria-hidden="true"><use href="/images/icons.svg#arrow-right"></use></svg>
+					</a>
+					<a class="btn btn--ghost btn--lg" href="/work/">See the work</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="wrap site-footer__inner">
+			<p>&copy; <span data-year>2026</span> Santosh Rao. Built from scratch, no framework.</p>
+			<ul class="social" role="list">
+				<li><a class="icon-btn" href="https://github.com/imskrao" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true"><use href="/images/icons.svg#github"></use></svg></a></li>
+				<li><a class="icon-btn" href="https://www.linkedin.com/in/im-skrao/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="/images/icons.svg#linkedin"></use></svg></a></li>
+				<li><a class="icon-btn" href="mailto:dev.santoshrao@gmail.com" aria-label="Email"><svg aria-hidden="true"><use href="/images/icons.svg#mail"></use></svg></a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+
+</html>
